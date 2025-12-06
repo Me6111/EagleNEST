@@ -10,8 +10,9 @@ export class GetFullDirController {
     console.log('Received request with dir:', dir);
 
     try {
-      const reactBaseDir = path.resolve('C:/Users/user/Desktop/projects/personal_ws/personal_ws/src/components');
-      const targetDir = dir ? path.resolve(dir) : reactBaseDir;
+      const reactBaseDir = path.resolve(__dirname, '../../components');
+      const targetDir = dir ? path.resolve(reactBaseDir, dir) : reactBaseDir;
+
 
       const normalizedBase = path.normalize(reactBaseDir).toLowerCase();
       const normalizedTarget = path.normalize(targetDir).toLowerCase();
