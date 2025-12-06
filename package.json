@@ -7,10 +7,10 @@
   "license": "UNLICENSED",
 "scripts": {
   "build": "nest build",
-  "start": "node dist/main.js",
+  "start": "node -r dotenv/config dist/main.js",
   "start:dev": "nest start --watch",
   "start:debug": "nest start --debug --watch",
-  "start:prod": "node dist/main.js",
+  "start:prod": "node -r dotenv/config dist/main.js",
   "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
   "test": "jest",
   "test:watch": "jest --watch",
